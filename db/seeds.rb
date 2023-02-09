@@ -13,6 +13,7 @@ City.destroy_all
 Doctor.destroy_all
 Patient.destroy_all
 Appointment.destroy_all
+Specialty.destroy_all
 
 
 # City create
@@ -60,7 +61,7 @@ end
     puts "#{i+1} appointment(s) created"
 end
 
-=begin
+
 # Specialty create
 specialties = ["kine","dentiste","ostheo","pediatre","podologue"]
 specialties.each_with_index do |specialty,i|
@@ -73,12 +74,11 @@ end
 
 
 # JoinTableSpecialtyDoctor create
-20.times do |i|
+10.times do |i|
     JoinTableSpecialtyDoctor.create(
-        specialty_id:Specialty.all.sample.id,
-        doctor_id:Doctor.all.sample.id
+        doctor_id:Doctor.all.sample.id,
+        specialty_id:Specialty.all.sample.id
     )
     puts "*"*(i+1)
-    puts "#{i+1} JoinTableSpecialtyDoctor(s) created"
+    puts "#{i+1} jointable(s) created"
 end
-=end
