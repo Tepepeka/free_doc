@@ -14,6 +14,7 @@ Doctor.destroy_all
 Patient.destroy_all
 Appointment.destroy_all
 Specialty.destroy_all
+JoinTableSpecialtyDoctor.destroy_all
 
 
 # City create
